@@ -1,5 +1,6 @@
-commandTable = { }
 ccmd = { }
+
+local commandTable = { }
 
 function ccmd.AddCommand( command, func )
 
