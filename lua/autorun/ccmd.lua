@@ -8,7 +8,7 @@ function ccmd.AddCommand( command, func )
 	
 end
 
-function ccmd.FindPlayerByName( name )
+function ccmd.FindPlayerByName( name, findMore )
 	
 	local foundPlayers = { }
 	
@@ -16,6 +16,10 @@ function ccmd.FindPlayerByName( name )
 		if string.find( string.lower( v:Name() ), string.lower( name ), 0, true ) != nil then	
 			table.insert( foundPlayers, v )
 		end
+	end
+	
+	if findMore then
+		return foundPlayers
 	end
 	
 	if table.Count( foundPlayers ) == 1 then
